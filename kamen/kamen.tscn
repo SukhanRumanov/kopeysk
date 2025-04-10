@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvnlyawaav37e"]
+
+[ext_resource type="Script" uid="uid://cvnmwjuvi7qk" path="res://kamen/kamen.gd" id="1_fqmt5"]
+[ext_resource type="Texture2D" uid="uid://bef0ce1rs0ivf" path="res://kamen/kamen.png" id="1_snxus"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fqmt5"]
+radius = 13.0
+
+[node name="kamen" type="StaticBody2D"]
+script = ExtResource("1_fqmt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fqmt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+rotation = -0.120428
+skew = -0.0593412
+texture = ExtResource("1_snxus")

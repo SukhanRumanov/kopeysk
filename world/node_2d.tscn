@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqn0l53ydbvvg"]
+
+[ext_resource type="Texture2D" uid="uid://c38oxc0mxah6y" path="res://world/world.png" id="1_5uey8"]
+[ext_resource type="PackedScene" uid="uid://brxp2rdqfjyud" path="res://main_character/character_body_2d.tscn" id="2_s8wh0"]
+[ext_resource type="PackedScene" uid="uid://cr631n085fbo2" path="res://house/house.tscn" id="3_k5tmi"]
+[ext_resource type="PackedScene" uid="uid://bvnlyawaav37e" path="res://kamen/kamen.tscn" id="4_s8wh0"]
+
+[node name="main_world" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 3
+texture_repeat = 2
+texture = ExtResource("1_5uey8")
+offset = Vector2(512, 512)
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 1024)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_s8wh0")]
+top_level = true
+
+[node name="house" parent="." instance=ExtResource("3_k5tmi")]
+position = Vector2(122, 65)
+
+[node name="house2" parent="." instance=ExtResource("3_k5tmi")]
+position = Vector2(237, 63)
+
+[node name="kamen" parent="." instance=ExtResource("4_s8wh0")]
+position = Vector2(192, 116)
+
+[node name="kamen2" parent="." instance=ExtResource("4_s8wh0")]
+position = Vector2(105, 106)
