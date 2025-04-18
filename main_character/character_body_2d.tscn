@@ -1,21 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://brxp2rdqfjyud"]
+[gd_scene load_steps=9 format=3 uid="uid://brxp2rdqfjyud"]
 
 [ext_resource type="Script" uid="uid://dmpixgq8sguna" path="res://main_character/character_body_2d.gd" id="1_bj405"]
-[ext_resource type="Texture2D" uid="uid://bofcjnxa5kmn3" path="res://main_character/main.png" id="1_f50pn"]
 [ext_resource type="PackedScene" uid="uid://7ofksjvjehx4" path="res://camera/camera_2d.tscn" id="3_fawbp"]
+[ext_resource type="Texture2D" uid="uid://b73mpxunmjjj" path="res://main_character/main_hero1.png" id="3_ujel5"]
+[ext_resource type="Texture2D" uid="uid://dee2hogsn4gxo" path="res://main_character/main_hero2.png" id="4_jvv4x"]
+[ext_resource type="Texture2D" uid="uid://dj7wl7u8661ga" path="res://main_character/main_hero3.png" id="5_hjsyu"]
+[ext_resource type="Texture2D" uid="uid://baa8bvh762aqn" path="res://main_character/main_hero4.png" id="6_rrd8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f50pn"]
-size = Vector2(10, 12)
+size = Vector2(14.9999, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bpq36"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ujel5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jvv4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hjsyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rrd8n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="main_character" type="CharacterBody2D"]
 position = Vector2(160, 90)
+rotation = 6.28319
 script = ExtResource("1_bj405")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 3
-texture = ExtResource("1_f50pn")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.999977)
 shape = SubResource("RectangleShape2D_f50pn")
 
 [node name="Camera2D" parent="." instance=ExtResource("3_fawbp")]
+rotation_smoothing_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bpq36")
+frame_progress = 0.490534

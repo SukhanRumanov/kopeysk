@@ -1,3 +1,9 @@
-res://world/node_2d.tscn
 res://main_character/character_body_2d.tscn
 res://main_character/character_body_2d.gd
+res://world/node_2d.tscn
+res://camera/camera_2d.tscn
+res://world_obj/other/trash_can.tscn
+res://world_obj/other/bench.tscn
+res://world_obj/other/fence_color.tscn
+res://world_obj/other/fence_grey.tscn
+res://world_obj/other/hatch.tscn
