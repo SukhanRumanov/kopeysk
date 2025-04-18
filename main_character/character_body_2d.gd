@@ -11,7 +11,15 @@ func _physics_process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_G):
 		$"../house".position.x+=SPEED*delta
 	
+	#var mouse_pos = get_viewport().get_mouse_position()
+	#mouse_pos=mouse_pos- Vector2(90,180)
+	#mouse_pos.x=mouse_pos.x/90
+	#mouse_pos.y=mouse_pos.y/180
+	#$Sprite2D
+	#var sin_angle=mouse_pos.x/mouse_pos.y
 	
+	
+	$Sprite2D.rotation+=PI*0.5*delta
 	if Input.is_key_pressed(KEY_SHIFT):
 		speed*=2
 	
