@@ -1,0 +1,5 @@
+res://world/node_2d.tscn
+res://canvas_layer.tscn
+res://mobile_phone/mobile_phone.gd
+res://mobile_phone/telephon.tscn
+res://camera/camera_2d.tscn
